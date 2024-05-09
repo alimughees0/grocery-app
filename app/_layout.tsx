@@ -2,10 +2,14 @@ import { View, Text } from "react-native";
 import React from "react";
 import { Drawer } from "expo-router/drawer";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import DrawerContent from "@/components/DrawerContent";
 
 export default function _layout() {
 	return (
-		<Drawer screenOptions={{ drawerLabelStyle: { marginLeft: -20 } }}>
+		<Drawer
+			screenOptions={{ drawerLabelStyle: { marginLeft: -20 } }}
+			drawerContent={DrawerContent}
+		>
 			<Drawer.Screen
 				name="home/index"
 				options={{
